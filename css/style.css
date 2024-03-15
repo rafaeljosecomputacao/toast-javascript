@@ -53,14 +53,29 @@ body {
 }
 
 .toast::before {
-    background-color: var(--success);
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 4px;
     content: "";
-    animation: timeOut 4s linear 1 forwards;
+    animation: timeOut 5s linear 1 forwards;
+}
+
+.toast.success::before {
+    background-color: var(--success);
+}
+
+.toast.info::before {
+    background-color: var(--info);
+}
+
+.toast.warning::before {
+    background-color: var(--warning);
+}
+
+.toast.error::before {
+    background-color: var(--error);
 }
 
 @keyframes timeOut {
@@ -70,8 +85,28 @@ body {
 }
 
 .toast ion-icon {
-    color: var(--success);
     font-size: 1.5rem;
+}
+
+.toast.success ion-icon {
+    color: var(--success);
+}
+
+.toast.info ion-icon {
+    color: var(--info);
+}
+
+.toast.warning ion-icon {
+    color: var(--warning);
+}
+
+.toast.error ion-icon {
+    color: var(--error);
+}
+
+.toast ion-icon:nth-child(3) {
+    color: var(--dark);
+    opacity: .6;
 }
 
 .content .title,
